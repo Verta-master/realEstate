@@ -194,11 +194,11 @@
   
   <section class="benefits">
     <h2 class="title-h2">Наши преимущества<span>Самая большая база недвижимости</span></h2>
-    <div class="benefits__wrap wrapper">
-      <ul class="benefits__list">
-        <li class="benefits__item">Высокая скорость решения задач</li>
-        <li class="benefits__item">Обширный каталог недвижимости</li>
-        <li class="benefits__item">Скидки и бонусы от партнёров</li>
+    <div class="benefits__wrap">
+      <ul class="benefits__list wrapper">
+        <li class="benefits__item">Высокая скорость решения задач<span class="fa fa-angle-double-down"></span></li>
+        <li class="benefits__item">Обширный каталог недвижимости<span class="fa fa-angle-double-down"></span></li>
+        <li class="benefits__item">Скидки и бонусы<br>от партнёров<span class="fa fa-angle-double-down"></span></li>
       </ul>
     </div>
   </section>
@@ -208,7 +208,24 @@
       <img src="img/img-4.jpg" alt="Наши преимущества" width="835" height="609">
     </figure>
     <div class="about__wrap wrapper">
-      
+      <div class="search search--send">
+        <div class="search__wrap search__wrap--send">
+          <h1 class="search__title">Обратная связь</h1>
+          <p class="search__subtitle">Свяжитесь с нами и мы быстро и профессионально окажем полную</p>
+          <form action="#" method="get" class="search__form">
+            <div class="search__field">
+              <input type="text" name="name" id="name" class="search__input" placeholder="Ваше имя">
+            </div>
+            <div class="search__field">
+              <input type="tel" name="phone" id="phone" class="search__input" placeholder="Введите телефон">
+            </div>
+            <div class="search__field">
+              <input type="email" name="email" id="email" class="search__input" placeholder="Ваш e-mail">
+            </div>
+            <button type="submit" class="btn search__btn">отправить</button>
+          </form>
+        </div>
+      </div>
       <div class="about__block">
         <h2 class="title-h2">О компании<span>Мы работаем для Вас</span></h2>
         <p class="about__text">Агентство недвижимости  образовано в в сентябре 2001 года. За эти годы оно стало одним из признанных лидеров рынка недвижимости и оказывает полный комплекс риэлтерских услуг. С нашей помощью можно быстро, эффективно и безопасно решить свой квартирный вопрос, купить или продать коммерческую недвижимость. Мы специализируемся на оказании широкого спектра услуг в сфере недвижимости. В их числе все операции (приобретение, продажа, обмен, разъезд, приватизация) с объектами (дома, коттеджи, участки, гаражи) в Дмитрове и пригороде. Познакомиться с развернутым описанием наших услуг Вы можете в разделе "О компании".</p>
@@ -219,10 +236,10 @@
   <footer class="footer">
     <div class="footer__wrap wrapper">
       <div class="user">
-        <a href="Tel:+375333986174" class="user__phone"><span class="fa fa-phone"></span>+375(33)3986174</a>
-        <div class="user__wrap">
+        <a href="Tel:+375333986174" class="user__phone user__phone--footer"><span class="fa fa-phone"></span>+375(33)3986174</a>
+        <div class="user__wrap user__wrap--footer">
           <span class="fa fa-map-marker"></span>
-          <address class="user__address">г. Дмитров Невский пр. 14</address>
+          <address class="user__address">г.&nbsp;Дмитров Невский&nbsp;пр.&nbsp;14</address>
         </div>
       </div>
       <nav class="footer__menu">
@@ -255,13 +272,22 @@
       </nav>
       <ul class="social">
         <li class="social__item">
-          <a href="#" class="social__link"></a>
+          <a href="#" class="social__link">
+            <span class="fa fa-vk"></span>
+            <span class="visually-hidden">VKontakte</span>
+          </a>
         </li>
         <li class="social__item">
-          <a href="#" class="social__link"></a>
+          <a href="#" class="social__link">
+            <span class="fa fa-facebook"></span>
+            <span class="visually-hidden">Facebook</span>
+          </a>
         </li>
         <li class="social__item">
-          <a href="#" class="social__link"></a>
+          <a href="#" class="social__link">
+            <span class="fa fa-instagram"></span>
+            <span class="visually-hidden">Instagram</span>
+          </a>
         </li>
       </ul>
     </div>
