@@ -476,7 +476,7 @@ button {
 .promo::after {
   content: "";
   position: absolute;
-  bottom: 90px;
+  bottom: 50px;
   right: 0;
   width: 114px;
   height: 169px;
@@ -539,13 +539,13 @@ button {
 }
 .promo__h2 {
   position: absolute;
-  bottom: 80px;
+  bottom: 60px;
   left: calc(50% - 30px);
 }
 .header {
   position: relative;
   z-index: 5;
-  padding-top: 15px;
+  padding-top: 17px;
 }
 .header__wrap {
   display: -ms-flexbox;
@@ -554,7 +554,7 @@ button {
       justify-content: flex-start;
   -ms-flex-align: end;
       align-items: flex-end;
-  margin-bottom: 35px;
+  margin-bottom: 30px;
 }
 .header__text {
   font-size: 40px;
@@ -570,6 +570,7 @@ button {
   width: 40px;
   height: 40px;
   margin-right: 10px;
+  margin-left: -10px;
   color: #3d3d3d;
   font-size: 33px;
 }
@@ -579,22 +580,41 @@ button {
 }
 .menu__list {
   position: absolute;
-  top: 40px;
+  top: 45px;
   left: 0;
-  min-width: 250px;
+  width: 260px;
   padding: 10px;
   background-color: #fafeff;
+  box-shadow: 0px 10px 14.16px 9.84px rgba(5, 5, 5, 0.05);
 }
 .menu__link {
   display: block;
   padding: 5px 0;
   color: #4c4c4c;
   text-transform: uppercase;
+  padding-left: 17px;
+  position: relative;
+}
+.menu__link::before {
+  display: none;
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  background-color: #e7333e;
+  border-radius: 50%;
 }
 .menu__link:hover,
 .menu__link:active,
 .menu__link--active {
   color: #e7333e;
+}
+.menu__link:hover::before,
+.menu__link:active::before,
+.menu__link--active::before {
+  display: block;
 }
 .menu--closed .menu__btn-opened,
 .menu--closed .menu__list {
@@ -617,6 +637,7 @@ button {
 }
 .logo__img {
   display: block;
+  margin-right: 5px;
 }
 .logo__text {
   color: #e7333e;
@@ -658,20 +679,24 @@ button {
       align-items: flex-start;
   font-size: 30px;
   max-width: 250px;
-  margin-top: 30px;
+  margin-top: 25px;
 }
 .user__wrap span {
   display: block;
-  margin-right: 17px;
+  margin-right: 25px;
   margin-top: 10px;
 }
 .user__wrap--footer {
   font-size: 24px;
 }
+.user__wrap--footer span {
+  font-size: 30px;
+  margin-top: 0;
+}
 .search {
   background-color: #eeeeee;
   position: absolute;
-  top: 185px;
+  top: 190px;
   left: calc(50% + 370px);
   z-index: 5;
 }
@@ -688,25 +713,38 @@ button {
 }
 .search::after {
   right: 0;
-  bottom: -35px;
+  bottom: -20px;
   top: auto;
   left: auto;
   transform: scale(-1) rotate(45deg);
 }
 .search--send {
   position: relative;
-  top: 0;
-  left: 0;
-  margin-top: 100px;
+  top: 130px;
+  left: -55px;
 }
 .search--send .search__title {
-  max-width: none;
+  max-width: 440px;
+}
+.search--send .search__form {
+  margin-top: 20px;
+  padding-left: 30px;
+}
+.search--send .search__btn {
+  margin-top: 35px;
+  margin-bottom: -35px;
+}
+.search--send::before {
+  top: -25px;
+  left: -15px;
+}
+.search--send::after {
+  right: -40px;
 }
 .search__wrap {
   width: 604px;
   min-height: 379px;
-  padding: 35px;
-  padding-left: 70px;
+  padding: 30px 30px 30px 80px;
   position: relative;
 }
 .search__wrap::before {
@@ -722,15 +760,16 @@ button {
 }
 .search__wrap--send {
   width: 555px;
-  padding: 25px;
-  padding-left: 80px;
+  min-height: auto;
+  padding: 20px 55px;
+  padding-bottom: 0;
 }
 .search__wrap--send::before {
   display: none;
 }
 .search__title {
   margin: 0;
-  max-width: 320px;
+  max-width: 340px;
   font-size: 30px;
   font-weight: 700;
   text-align: center;
@@ -741,7 +780,7 @@ button {
   text-align: center;
 }
 .search__form {
-  margin-top: 40px;
+  margin-top: 33px;
   width: 374px;
 }
 .search__link {
@@ -759,8 +798,8 @@ button {
 .search__label {
   display: block;
   width: 100%;
-  padding: 5px 10px;
-  margin-bottom: 30px;
+  padding: 3px 10px;
+  margin-bottom: 25px;
   border-bottom: 1px solid #bfbfbf;
   cursor: pointer;
   position: relative;
@@ -778,7 +817,7 @@ button {
 .search__input {
   width: 100%;
   padding: 5px 10px;
-  margin-bottom: 30px;
+  margin-bottom: 21px;
   border-bottom: 1px solid #bfbfbf;
 }
 .search__input:-ms-input-placeholder {
@@ -797,7 +836,7 @@ button {
   left: 0;
   width: 100%;
   background-color: #eeeeee;
-  box-shadow: 0 10px 10px 10px #e4e3e3;
+  box-shadow: 0px 10px 14.16px 9.84px rgba(5, 5, 5, 0.05);
   z-index: 5;
 }
 .search__checkbox:checked ~ .search__list {
@@ -812,6 +851,7 @@ button {
 .search__btn {
   width: 184px;
   margin: 0 auto;
+  margin-top: 53px;
   margin-bottom: -50px;
 }
 .btn {
@@ -831,6 +871,10 @@ button {
 .btn:active {
   background-color: #db303b;
 }
+.main-nav {
+  width: 1230px;
+  margin: 0 auto;
+}
 .main-nav__list {
   display: -ms-flexbox;
   display: flex;
@@ -848,6 +892,12 @@ button {
   min-height: 189px;
   padding-top: 10px;
   position: relative;
+}
+.main-nav__link::before {
+  content: "";
+  position: absolute;
+  background-color: #eeeeee;
+  z-index: -1;
 }
 .main-nav__link::after {
   display: none;
@@ -877,6 +927,11 @@ button {
 .main-nav__link--active::after {
   display: block;
 }
+.main-nav__link:hover::before,
+.main-nav__link:active::before,
+.main-nav__link--active::before {
+  display: none;
+}
 .main-nav__icon {
   display: block;
   margin: 0 auto;
@@ -885,9 +940,46 @@ button {
   width: auto;
   fill: #58595b;
 }
+.main-nav__item:first-child .main-nav__link::before {
+  width: 59px;
+  height: 62px;
+  left: 30px;
+  top: 45px;
+}
+.main-nav__item:nth-child(2) .main-nav__link::before {
+  width: 59px;
+  height: 62px;
+  right: 40px;
+  top: -5px;
+}
+.main-nav__item:nth-child(3) .main-nav__link::before {
+  width: 27px;
+  height: 29px;
+  right: 50px;
+  top: 60px;
+}
+.main-nav__item:nth-child(4) .main-nav__link::before {
+  width: 39px;
+  height: 62px;
+  right: 40px;
+  top: 0;
+}
+.main-nav__item:nth-child(5) .main-nav__link::before {
+  width: 36px;
+  height: 38px;
+  right: 40px;
+  top: 60px;
+}
+.main-nav__item:nth-child(6) .main-nav__link::before {
+  width: 29px;
+  height: 113px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -20px;
+}
 .service {
   padding-top: 65px;
-  padding-bottom: 45px;
+  padding-bottom: 40px;
   overflow: hidden;
   position: relative;
 }
@@ -936,7 +1028,7 @@ button {
   max-width: 470px;
 }
 .service__item {
-  margin-bottom: 30px;
+  margin-bottom: 35px;
   box-shadow: 0px 0px 14.16px 9.84px rgba(5, 5, 5, 0.05);
 }
 .service__link {
@@ -971,7 +1063,7 @@ button {
   background-color: #db303b;
 }
 .benefits {
-  padding-top: 60px;
+  padding-top: 55px;
   margin-bottom: 155px;
   position: relative;
 }
@@ -989,7 +1081,7 @@ button {
   width: 100%;
   padding-top: 50px;
   padding-bottom: 44px;
-  margin-top: 25px;
+  margin-top: 20px;
   background-color: #eeeeee;
   position: relative;
 }
@@ -1044,7 +1136,8 @@ button {
 }
 .about {
   position: relative;
-  padding-bottom: 100px;
+  padding-bottom: 95px;
+  overflow: hidden;
 }
 .about::before {
   content: "";
@@ -1059,7 +1152,7 @@ button {
 .about::after {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: -40px;
   left: calc(50% + 385px);
   width: 373px;
   height: 506px;
@@ -1075,8 +1168,16 @@ button {
       align-items: flex-start;
 }
 .about__block {
-  width: 520px;
+  width: 540px;
+  padding-top: 20px;
+  padding-right: 10px;
   text-align: center;
+}
+.about__title {
+  margin-bottom: 35px;
+}
+.about__text {
+  line-height: 1.22;
 }
 .about__img {
   position: absolute;
@@ -1111,7 +1212,8 @@ button {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 420px;
+  width: 450px;
+  margin-left: 65px;
   -ms-flex-pack: justify;
       justify-content: space-between;
   -ms-flex-align: start;
@@ -1156,6 +1258,8 @@ button {
       justify-content: flex-end;
   -ms-flex-align: center;
       align-items: center;
+  padding-right: 5px;
+  padding-top: 5px;
 }
 .social__link {
   display: block;
@@ -1645,13 +1749,13 @@ button.swiper-pagination-bullet {
 }
 .slider {
   width: 100%;
-  padding-top: 55px;
+  padding-top: 50px;
   position: relative;
 }
 .slider::before {
   content: "";
   position: absolute;
-  top: -50px;
+  top: -55px;
   right: 0;
   width: 300px;
   height: 98px;
@@ -1662,7 +1766,7 @@ button.swiper-pagination-bullet {
 .slider::after {
   content: "";
   position: absolute;
-  bottom: 170px;
+  bottom: 205px;
   left: 0;
   width: 187px;
   height: 268px;
@@ -1675,7 +1779,7 @@ button.swiper-pagination-bullet {
 .slider__wrap::before {
   content: "";
   position: absolute;
-  top: 85px;
+  top: 35px;
   right: calc(50% - 15px);
   width: calc(50vw + 15px);
   height: 500px;
@@ -1684,7 +1788,7 @@ button.swiper-pagination-bullet {
   z-index: -1;
 }
 .slider__title {
-  padding-left: 200px;
+  padding-left: 420px;
 }
 .slider__sort {
   display: -ms-flexbox;
@@ -1693,15 +1797,15 @@ button.swiper-pagination-bullet {
       justify-content: space-between;
   -ms-flex-align: center;
       align-items: center;
-  margin-top: 20px;
-  margin-bottom: 25px;
+  margin-top: 17px;
+  margin-bottom: 30px;
   padding-left: 77px;
   padding-right: 35px;
 }
 .slider__search {
   display: block;
   min-height: 49px;
-  padding: 15px 20px;
+  padding: 10px 20px;
   font-weight: 400;
   color: #4c4c4c;
   border: 1px solid rgba(255, 255, 255, 0);
@@ -1716,7 +1820,7 @@ button.swiper-pagination-bullet {
 .slider__bottom,
 .slider__top {
   background-color: #eeeeee;
-  padding: 22px 17px 22px 30px;
+  padding: 20px;
 }
 .slider__top {
   margin-bottom: 8px;
@@ -1738,16 +1842,21 @@ button.swiper-pagination-bullet {
 }
 .slider__h3 {
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   font-weight: 700;
+  font-size: 24px;
 }
 .slider__address,
 .slider__text {
   margin: 0;
 }
 .slider__address {
-  margin-top: 15px;
+  margin-top: 5px;
   margin-bottom: 15px;
+}
+.slider__address span {
+  font-size: 30px;
+  padding-right: 10px;
 }
 .slider__details {
   display: -ms-flexbox;
@@ -1769,15 +1878,15 @@ button.swiper-pagination-bullet {
 .slider__link {
   width: 184px;
   margin: 0 auto;
-  margin-top: 25px;
-  margin-bottom: -50px;
+  margin-top: 20px;
+  margin-bottom: -45px;
 }
 .slider__container {
   padding-bottom: 30px;
 }
 .slider__pagination .swiper-pagination-bullet {
-  width: 17px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
   display: block;
   margin-bottom: 10px;
   border: 2px solid #e7333e;
@@ -1788,6 +1897,6 @@ button.swiper-pagination-bullet {
   background-color: #e7333e;
 }
 .slider__pagination {
-  top: 120px;
-  right: -20px;
+  top: 73px;
+  right: -40px;
 }
