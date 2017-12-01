@@ -56,31 +56,25 @@
         <h1 class="search__title">Аренда и продажа квартир в Дмитрове!</h1>
         <form action="#" method="get" class="search__form">
           <div class="search__field">
-            <input type="checkbox" name="check-1" id="check-1" class="search__checkbox">
-            <label for="check-1" class="search__label">Снять</label>
-            <ul class="search__list">
-              <li class="search__item"><a href="#" class="search__link">Снять</a></li>
-              <li class="search__item"><a href="#" class="search__link">Продать</a></li>
-              <li class="search__item"><a href="#" class="search__link">Сдать</a></li>
-            </ul>
+            <select name="rent" id="rent" class="search__select">
+              <option value="Снять" selected>Снять</option>
+              <option value="Продать">Продать</option>
+              <option value="Сдать">Сдать</option>
+            </select>
           </div>
           <div class="search__field">
-            <input type="checkbox" name="check-2" id="check-2" class="search__checkbox">
-            <label for="check-2" class="search__label">Любую недвижимость</label>
-            <ul class="search__list">
-              <li class="search__item"><a href="#" class="search__link">Любую недвижимость</a></li>
-              <li class="search__item"><a href="#" class="search__link">Пункт 2</a></li>
-              <li class="search__item"><a href="#" class="search__link">Пункт 3</a></li>
-            </ul>
+            <select name="type" id="type" class="search__select">
+              <option value="any" selected>Любую недвижимость</option>
+              <option value="value2">Пункт 2</option>
+              <option value="value3">Пункт 3</option>
+            </select>
           </div>
           <div class="search__field">
-            <input type="checkbox" name="check-3" id="check-3" class="search__checkbox">
-            <label for="check-3" class="search__label">Все районы</label>
-            <ul class="search__list">
-              <li class="search__item"><a href="#" class="search__link">Все районы</a></li>
-              <li class="search__item"><a href="#" class="search__link">Пункт 2</a></li>
-              <li class="search__item"><a href="#" class="search__link">Пункт 3</a></li>
-            </ul>
+            <select name="place" id="place" class="search__select">
+              <option value="all" selected>Все районы</option>
+              <option value="value2">Пункт 2</option>
+              <option value="value3">Пункт 3</option>
+            </select>
           </div>
           <button type="submit" class="btn search__btn">ПОИСК</button>
         </form>
@@ -161,107 +155,404 @@
   <section class="slider">
     <div class="wrapper slider__wrap">
       <h2 class="title-h2 slider__title">Лучшие предложения<span>Самая большая база недвижимости</span></h2>
+      <input type="radio" name="radio" id="tab-01" class="slider__input" checked>
+      <input type="radio" name="radio" id="tab-02" class="slider__input">
+      <input type="radio" name="radio" id="tab-03" class="slider__input">
+      <input type="radio" name="radio" id="tab-04" class="slider__input">
       <div class="slider__sort">
-        <a href="#" class="slider__search slider__search--active">Новостройки</a>
-        <a href="#" class="slider__search">Вторичное жилье</a>
-        <a href="#" class="slider__search">Загородная недвижимость</a>
-        <a href="#" class="slider__search">Земельные участки</a>
+        <label for="tab-01" class="slider__search slider__search--01">Новостройки</label>
+        <label for="tab-02" class="slider__search slider__search--02">Вторичное жилье</label>
+        <label for="tab-03" class="slider__search slider__search--03">Загородная недвижимость</label>
+        <label for="tab-04" class="slider__search slider__search--04">Земельные участки</label>
       </div>
-      <div class="swiper-container slider__container">
-        <ul class="swiper-wrapper">
-          <li class="swiper-slide slider__slide">
-            <figure class="slider__img">
-              <img src="img/house-1.jpg" alt="" width="354" height="222">
-            </figure>
-            <div class="slider__top">
-              <h3 class="slider__h3">Квартира</h3>
-              <p class="slider__text">3 комнаты</p>
-              <p class="slider__address"><span class="fa fa-map-marker"></span> г.&nbsp;Дмитров, ул.&nbsp;Мира,<br>д.2, кв.33</p>
-              <div class="slider__details">
-                <p class="slider__area">40 м2</p>
-                <p class="slider__floor">3/13 этаж</p>
+      <div class="slider__tab slider__tab--01">
+        <div class="swiper-container slider__container">
+          <ul class="swiper-wrapper">
+            <li class="swiper-slide slider__slide">
+              <figure class="slider__img">
+                <img src="img/house-1.jpg" alt="" width="354" height="222">
+              </figure>
+              <div class="slider__top">
+                <h3 class="slider__h3">Квартира</h3>
+                <p class="slider__text">3 комнаты</p>
+                <p class="slider__address"><span class="fa fa-map-marker"></span> г.&nbsp;Дмитров, ул.&nbsp;Мира,<br>д.2, кв.33</p>
+                <div class="slider__details">
+                  <p class="slider__area">40 м2</p>
+                  <p class="slider__floor">3/13 этаж</p>
+                </div>
               </div>
-            </div>
-            <div class="slider__bottom">
-              <p class="slider__price"><b>5 200 000</b> &#8381;</p>
-              <a href="#" class="btn slider__link">ПОКАЗАТЬ</a>
-            </div>
-          </li>
-          <li class="swiper-slide slider__slide">
-            <figure class="slider__img">
-              <img src="img/house-2.jpg" alt="" width="354" height="222">
-            </figure>
-            <div class="slider__top">
-              <h3 class="slider__h3">Квартира</h3>
-              <p class="slider__text">3 комнаты</p>
-              <p class="slider__address"><span class="fa fa-map-marker"></span> г.&nbsp;Дмитров, ул.&nbsp;Мира,<br>д.2, кв.33</p>
-              <div class="slider__details">
-                <p class="slider__area">40 м2</p>
-                <p class="slider__floor">3/13 этаж</p>
+              <div class="slider__bottom">
+                <p class="slider__price"><b>5 200 000</b> &#8381;</p>
+                <a href="#" class="btn slider__link">ПОКАЗАТЬ</a>
               </div>
-            </div>
-            <div class="slider__bottom">
-              <p class="slider__price"><b>5 200 000</b> &#8381;</p>
-              <a href="#" class="btn slider__link">ПОКАЗАТЬ</a>
-            </div>
-          </li>
-          <li class="swiper-slide slider__slide">
-            <figure class="slider__img">
-              <img src="img/house-3.jpg" alt="" width="354" height="222">
-            </figure>
-            <div class="slider__top">
-              <h3 class="slider__h3">Квартира</h3>
-              <p class="slider__text">3 комнаты</p>
-              <p class="slider__address"><span class="fa fa-map-marker"></span> г.&nbsp;Дмитров, ул.&nbsp;Мира,<br>д.2, кв.33</p>
-              <div class="slider__details">
-                <p class="slider__area">40 м2</p>
-                <p class="slider__floor">3/13 этаж</p>
+            </li>
+            <li class="swiper-slide slider__slide">
+              <figure class="slider__img">
+                <img src="img/house-2.jpg" alt="" width="354" height="222">
+              </figure>
+              <div class="slider__top">
+                <h3 class="slider__h3">Квартира</h3>
+                <p class="slider__text">3 комнаты</p>
+                <p class="slider__address"><span class="fa fa-map-marker"></span> г.&nbsp;Дмитров, ул.&nbsp;Мира,<br>д.2, кв.33</p>
+                <div class="slider__details">
+                  <p class="slider__area">40 м2</p>
+                  <p class="slider__floor">3/13 этаж</p>
+                </div>
               </div>
-            </div>
-            <div class="slider__bottom">
-              <p class="slider__price"><b>5 200 000</b> &#8381;</p>
-              <a href="#" class="btn slider__link">ПОКАЗАТЬ</a>
-            </div>
-          </li>
-          <li class="swiper-slide slider__slide">
-            <figure class="slider__img">
-              <img src="img/house-1.jpg" alt="" width="354" height="222">
-            </figure>
-            <div class="slider__top">
-              <h3 class="slider__h3">Квартира</h3>
-              <p class="slider__text">3 комнаты</p>
-              <p class="slider__address"><span class="fa fa-map-marker"></span> г.&nbsp;Дмитров, ул.&nbsp;Мира,<br>д.2, кв.33</p>
-              <div class="slider__details">
-                <p class="slider__area">40 м2</p>
-                <p class="slider__floor">3/13 этаж</p>
+              <div class="slider__bottom">
+                <p class="slider__price"><b>5 200 000</b> &#8381;</p>
+                <a href="#" class="btn slider__link">ПОКАЗАТЬ</a>
               </div>
-            </div>
-            <div class="slider__bottom">
-              <p class="slider__price"><b>5 200 000</b> &#8381;</p>
-              <a href="#" class="btn slider__link">ПОКАЗАТЬ</a>
-            </div>
-          </li>
-          <li class="swiper-slide slider__slide">
-            <figure class="slider__img">
-              <img src="img/house-2.jpg" alt="" width="354" height="222">
-            </figure>
-            <div class="slider__top">
-              <h3 class="slider__h3">Квартира</h3>
-              <p class="slider__text">3 комнаты</p>
-              <p class="slider__address"><span class="fa fa-map-marker"></span> г.&nbsp;Дмитров, ул.&nbsp;Мира,<br>д.2, кв.33</p>
-              <div class="slider__details">
-                <p class="slider__area">40 м2</p>
-                <p class="slider__floor">3/13 этаж</p>
+            </li>
+            <li class="swiper-slide slider__slide">
+              <figure class="slider__img">
+                <img src="img/house-3.jpg" alt="" width="354" height="222">
+              </figure>
+              <div class="slider__top">
+                <h3 class="slider__h3">Квартира</h3>
+                <p class="slider__text">3 комнаты</p>
+                <p class="slider__address"><span class="fa fa-map-marker"></span> г.&nbsp;Дмитров, ул.&nbsp;Мира,<br>д.2, кв.33</p>
+                <div class="slider__details">
+                  <p class="slider__area">40 м2</p>
+                  <p class="slider__floor">3/13 этаж</p>
+                </div>
               </div>
-            </div>
-            <div class="slider__bottom">
-              <p class="slider__price"><b>5 200 000</b> &#8381;</p>
-              <a href="#" class="btn slider__link">ПОКАЗАТЬ</a>
-            </div>
-          </li>
-        </ul>
+              <div class="slider__bottom">
+                <p class="slider__price"><b>5 200 000</b> &#8381;</p>
+                <a href="#" class="btn slider__link">ПОКАЗАТЬ</a>
+              </div>
+            </li>
+            <li class="swiper-slide slider__slide">
+              <figure class="slider__img">
+                <img src="img/house-1.jpg" alt="" width="354" height="222">
+              </figure>
+              <div class="slider__top">
+                <h3 class="slider__h3">Квартира</h3>
+                <p class="slider__text">3 комнаты</p>
+                <p class="slider__address"><span class="fa fa-map-marker"></span> г.&nbsp;Дмитров, ул.&nbsp;Мира,<br>д.2, кв.33</p>
+                <div class="slider__details">
+                  <p class="slider__area">40 м2</p>
+                  <p class="slider__floor">3/13 этаж</p>
+                </div>
+              </div>
+              <div class="slider__bottom">
+                <p class="slider__price"><b>5 200 000</b> &#8381;</p>
+                <a href="#" class="btn slider__link">ПОКАЗАТЬ</a>
+              </div>
+            </li>
+            <li class="swiper-slide slider__slide">
+              <figure class="slider__img">
+                <img src="img/house-2.jpg" alt="" width="354" height="222">
+              </figure>
+              <div class="slider__top">
+                <h3 class="slider__h3">Квартира</h3>
+                <p class="slider__text">3 комнаты</p>
+                <p class="slider__address"><span class="fa fa-map-marker"></span> г.&nbsp;Дмитров, ул.&nbsp;Мира,<br>д.2, кв.33</p>
+                <div class="slider__details">
+                  <p class="slider__area">40 м2</p>
+                  <p class="slider__floor">3/13 этаж</p>
+                </div>
+              </div>
+              <div class="slider__bottom">
+                <p class="slider__price"><b>5 200 000</b> &#8381;</p>
+                <a href="#" class="btn slider__link">ПОКАЗАТЬ</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="swiper-pagination slider__pagination"></div>
       </div>
-      <div class="swiper-pagination slider__pagination"></div>
+      <div class="slider__tab slider__tab--02">
+        <div class="swiper-container slider__container-2">
+          <ul class="swiper-wrapper">
+            <li class="swiper-slide slider__slide">
+              <figure class="slider__img">
+                <img src="img/house-1.jpg" alt="" width="354" height="222">
+              </figure>
+              <div class="slider__top">
+                <h3 class="slider__h3">Квартира</h3>
+                <p class="slider__text">3 комнаты</p>
+                <p class="slider__address"><span class="fa fa-map-marker"></span> г.&nbsp;Дмитров, ул.&nbsp;Мира,<br>д.2, кв.33</p>
+                <div class="slider__details">
+                  <p class="slider__area">40 м2</p>
+                  <p class="slider__floor">3/13 этаж</p>
+                </div>
+              </div>
+              <div class="slider__bottom">
+                <p class="slider__price"><b>5 200 000</b> &#8381;</p>
+                <a href="#" class="btn slider__link">ПОКАЗАТЬ</a>
+              </div>
+            </li>
+            <li class="swiper-slide slider__slide">
+              <figure class="slider__img">
+                <img src="img/house-2.jpg" alt="" width="354" height="222">
+              </figure>
+              <div class="slider__top">
+                <h3 class="slider__h3">Квартира</h3>
+                <p class="slider__text">3 комнаты</p>
+                <p class="slider__address"><span class="fa fa-map-marker"></span> г.&nbsp;Дмитров, ул.&nbsp;Мира,<br>д.2, кв.33</p>
+                <div class="slider__details">
+                  <p class="slider__area">40 м2</p>
+                  <p class="slider__floor">3/13 этаж</p>
+                </div>
+              </div>
+              <div class="slider__bottom">
+                <p class="slider__price"><b>5 200 000</b> &#8381;</p>
+                <a href="#" class="btn slider__link">ПОКАЗАТЬ</a>
+              </div>
+            </li>
+            <li class="swiper-slide slider__slide">
+              <figure class="slider__img">
+                <img src="img/house-3.jpg" alt="" width="354" height="222">
+              </figure>
+              <div class="slider__top">
+                <h3 class="slider__h3">Квартира</h3>
+                <p class="slider__text">3 комнаты</p>
+                <p class="slider__address"><span class="fa fa-map-marker"></span> г.&nbsp;Дмитров, ул.&nbsp;Мира,<br>д.2, кв.33</p>
+                <div class="slider__details">
+                  <p class="slider__area">40 м2</p>
+                  <p class="slider__floor">3/13 этаж</p>
+                </div>
+              </div>
+              <div class="slider__bottom">
+                <p class="slider__price"><b>5 200 000</b> &#8381;</p>
+                <a href="#" class="btn slider__link">ПОКАЗАТЬ</a>
+              </div>
+            </li>
+            <li class="swiper-slide slider__slide">
+              <figure class="slider__img">
+                <img src="img/house-1.jpg" alt="" width="354" height="222">
+              </figure>
+              <div class="slider__top">
+                <h3 class="slider__h3">Квартира</h3>
+                <p class="slider__text">3 комнаты</p>
+                <p class="slider__address"><span class="fa fa-map-marker"></span> г.&nbsp;Дмитров, ул.&nbsp;Мира,<br>д.2, кв.33</p>
+                <div class="slider__details">
+                  <p class="slider__area">40 м2</p>
+                  <p class="slider__floor">3/13 этаж</p>
+                </div>
+              </div>
+              <div class="slider__bottom">
+                <p class="slider__price"><b>5 200 000</b> &#8381;</p>
+                <a href="#" class="btn slider__link">ПОКАЗАТЬ</a>
+              </div>
+            </li>
+            <li class="swiper-slide slider__slide">
+              <figure class="slider__img">
+                <img src="img/house-2.jpg" alt="" width="354" height="222">
+              </figure>
+              <div class="slider__top">
+                <h3 class="slider__h3">Квартира</h3>
+                <p class="slider__text">3 комнаты</p>
+                <p class="slider__address"><span class="fa fa-map-marker"></span> г.&nbsp;Дмитров, ул.&nbsp;Мира,<br>д.2, кв.33</p>
+                <div class="slider__details">
+                  <p class="slider__area">40 м2</p>
+                  <p class="slider__floor">3/13 этаж</p>
+                </div>
+              </div>
+              <div class="slider__bottom">
+                <p class="slider__price"><b>5 200 000</b> &#8381;</p>
+                <a href="#" class="btn slider__link">ПОКАЗАТЬ</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="swiper-pagination slider__pagination-2"></div>
+      </div>
+      <div class="slider__tab slider__tab--03">
+        <div class="swiper-container slider__container-3">
+          <ul class="swiper-wrapper">
+            <li class="swiper-slide slider__slide">
+              <figure class="slider__img">
+                <img src="img/house-1.jpg" alt="" width="354" height="222">
+              </figure>
+              <div class="slider__top">
+                <h3 class="slider__h3">Квартира</h3>
+                <p class="slider__text">3 комнаты</p>
+                <p class="slider__address"><span class="fa fa-map-marker"></span> г.&nbsp;Дмитров, ул.&nbsp;Мира,<br>д.2, кв.33</p>
+                <div class="slider__details">
+                  <p class="slider__area">40 м2</p>
+                  <p class="slider__floor">3/13 этаж</p>
+                </div>
+              </div>
+              <div class="slider__bottom">
+                <p class="slider__price"><b>5 200 000</b> &#8381;</p>
+                <a href="#" class="btn slider__link">ПОКАЗАТЬ</a>
+              </div>
+            </li>
+            <li class="swiper-slide slider__slide">
+              <figure class="slider__img">
+                <img src="img/house-2.jpg" alt="" width="354" height="222">
+              </figure>
+              <div class="slider__top">
+                <h3 class="slider__h3">Квартира</h3>
+                <p class="slider__text">3 комнаты</p>
+                <p class="slider__address"><span class="fa fa-map-marker"></span> г.&nbsp;Дмитров, ул.&nbsp;Мира,<br>д.2, кв.33</p>
+                <div class="slider__details">
+                  <p class="slider__area">40 м2</p>
+                  <p class="slider__floor">3/13 этаж</p>
+                </div>
+              </div>
+              <div class="slider__bottom">
+                <p class="slider__price"><b>5 200 000</b> &#8381;</p>
+                <a href="#" class="btn slider__link">ПОКАЗАТЬ</a>
+              </div>
+            </li>
+            <li class="swiper-slide slider__slide">
+              <figure class="slider__img">
+                <img src="img/house-3.jpg" alt="" width="354" height="222">
+              </figure>
+              <div class="slider__top">
+                <h3 class="slider__h3">Квартира</h3>
+                <p class="slider__text">3 комнаты</p>
+                <p class="slider__address"><span class="fa fa-map-marker"></span> г.&nbsp;Дмитров, ул.&nbsp;Мира,<br>д.2, кв.33</p>
+                <div class="slider__details">
+                  <p class="slider__area">40 м2</p>
+                  <p class="slider__floor">3/13 этаж</p>
+                </div>
+              </div>
+              <div class="slider__bottom">
+                <p class="slider__price"><b>5 200 000</b> &#8381;</p>
+                <a href="#" class="btn slider__link">ПОКАЗАТЬ</a>
+              </div>
+            </li>
+            <li class="swiper-slide slider__slide">
+              <figure class="slider__img">
+                <img src="img/house-1.jpg" alt="" width="354" height="222">
+              </figure>
+              <div class="slider__top">
+                <h3 class="slider__h3">Квартира</h3>
+                <p class="slider__text">3 комнаты</p>
+                <p class="slider__address"><span class="fa fa-map-marker"></span> г.&nbsp;Дмитров, ул.&nbsp;Мира,<br>д.2, кв.33</p>
+                <div class="slider__details">
+                  <p class="slider__area">40 м2</p>
+                  <p class="slider__floor">3/13 этаж</p>
+                </div>
+              </div>
+              <div class="slider__bottom">
+                <p class="slider__price"><b>5 200 000</b> &#8381;</p>
+                <a href="#" class="btn slider__link">ПОКАЗАТЬ</a>
+              </div>
+            </li>
+            <li class="swiper-slide slider__slide">
+              <figure class="slider__img">
+                <img src="img/house-2.jpg" alt="" width="354" height="222">
+              </figure>
+              <div class="slider__top">
+                <h3 class="slider__h3">Квартира</h3>
+                <p class="slider__text">3 комнаты</p>
+                <p class="slider__address"><span class="fa fa-map-marker"></span> г.&nbsp;Дмитров, ул.&nbsp;Мира,<br>д.2, кв.33</p>
+                <div class="slider__details">
+                  <p class="slider__area">40 м2</p>
+                  <p class="slider__floor">3/13 этаж</p>
+                </div>
+              </div>
+              <div class="slider__bottom">
+                <p class="slider__price"><b>5 200 000</b> &#8381;</p>
+                <a href="#" class="btn slider__link">ПОКАЗАТЬ</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="swiper-pagination slider__pagination-3"></div>
+      </div>
+      <div class="slider__tab slider__tab--04">
+        <div class="swiper-container slider__container-4">
+          <ul class="swiper-wrapper">
+            <li class="swiper-slide slider__slide">
+              <figure class="slider__img">
+                <img src="img/house-1.jpg" alt="" width="354" height="222">
+              </figure>
+              <div class="slider__top">
+                <h3 class="slider__h3">Квартира</h3>
+                <p class="slider__text">3 комнаты</p>
+                <p class="slider__address"><span class="fa fa-map-marker"></span> г.&nbsp;Дмитров, ул.&nbsp;Мира,<br>д.2, кв.33</p>
+                <div class="slider__details">
+                  <p class="slider__area">40 м2</p>
+                  <p class="slider__floor">3/13 этаж</p>
+                </div>
+              </div>
+              <div class="slider__bottom">
+                <p class="slider__price"><b>5 200 000</b> &#8381;</p>
+                <a href="#" class="btn slider__link">ПОКАЗАТЬ</a>
+              </div>
+            </li>
+            <li class="swiper-slide slider__slide">
+              <figure class="slider__img">
+                <img src="img/house-2.jpg" alt="" width="354" height="222">
+              </figure>
+              <div class="slider__top">
+                <h3 class="slider__h3">Квартира</h3>
+                <p class="slider__text">3 комнаты</p>
+                <p class="slider__address"><span class="fa fa-map-marker"></span> г.&nbsp;Дмитров, ул.&nbsp;Мира,<br>д.2, кв.33</p>
+                <div class="slider__details">
+                  <p class="slider__area">40 м2</p>
+                  <p class="slider__floor">3/13 этаж</p>
+                </div>
+              </div>
+              <div class="slider__bottom">
+                <p class="slider__price"><b>5 200 000</b> &#8381;</p>
+                <a href="#" class="btn slider__link">ПОКАЗАТЬ</a>
+              </div>
+            </li>
+            <li class="swiper-slide slider__slide">
+              <figure class="slider__img">
+                <img src="img/house-3.jpg" alt="" width="354" height="222">
+              </figure>
+              <div class="slider__top">
+                <h3 class="slider__h3">Квартира</h3>
+                <p class="slider__text">3 комнаты</p>
+                <p class="slider__address"><span class="fa fa-map-marker"></span> г.&nbsp;Дмитров, ул.&nbsp;Мира,<br>д.2, кв.33</p>
+                <div class="slider__details">
+                  <p class="slider__area">40 м2</p>
+                  <p class="slider__floor">3/13 этаж</p>
+                </div>
+              </div>
+              <div class="slider__bottom">
+                <p class="slider__price"><b>5 200 000</b> &#8381;</p>
+                <a href="#" class="btn slider__link">ПОКАЗАТЬ</a>
+              </div>
+            </li>
+            <li class="swiper-slide slider__slide">
+              <figure class="slider__img">
+                <img src="img/house-1.jpg" alt="" width="354" height="222">
+              </figure>
+              <div class="slider__top">
+                <h3 class="slider__h3">Квартира</h3>
+                <p class="slider__text">3 комнаты</p>
+                <p class="slider__address"><span class="fa fa-map-marker"></span> г.&nbsp;Дмитров, ул.&nbsp;Мира,<br>д.2, кв.33</p>
+                <div class="slider__details">
+                  <p class="slider__area">40 м2</p>
+                  <p class="slider__floor">3/13 этаж</p>
+                </div>
+              </div>
+              <div class="slider__bottom">
+                <p class="slider__price"><b>5 200 000</b> &#8381;</p>
+                <a href="#" class="btn slider__link">ПОКАЗАТЬ</a>
+              </div>
+            </li>
+            <li class="swiper-slide slider__slide">
+              <figure class="slider__img">
+                <img src="img/house-2.jpg" alt="" width="354" height="222">
+              </figure>
+              <div class="slider__top">
+                <h3 class="slider__h3">Квартира</h3>
+                <p class="slider__text">3 комнаты</p>
+                <p class="slider__address"><span class="fa fa-map-marker"></span> г.&nbsp;Дмитров, ул.&nbsp;Мира,<br>д.2, кв.33</p>
+                <div class="slider__details">
+                  <p class="slider__area">40 м2</p>
+                  <p class="slider__floor">3/13 этаж</p>
+                </div>
+              </div>
+              <div class="slider__bottom">
+                <p class="slider__price"><b>5 200 000</b> &#8381;</p>
+                <a href="#" class="btn slider__link">ПОКАЗАТЬ</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="swiper-pagination slider__pagination-4"></div>
+      </div>
     </div>
   </section>
   
@@ -368,13 +659,43 @@
   
   <script src="js/script.js"></script>
   <script src="js/swiper.min.js"></script>
-<!-- Slider -->
+<!-- Sliders in tabs -->
   <script>
-    var swiper = new Swiper('.swiper-container', {
+    var swiper = new Swiper('.slider__container', {
       slidesPerView: "auto",
-      pagination: '.swiper-pagination',
+      pagination: '.slider__pagination',
       paginationClickable: true,
       spaceBetween: 50,
+      observer: true,
+      observeParents: true,
+      init: true,
+    });
+    var swiper2 = new Swiper('.slider__container-2', {
+      slidesPerView: "auto",
+      pagination: '.slider__pagination-2',
+      paginationClickable: true,
+      spaceBetween: 50,
+      observer: true,
+      observeParents: true,
+      init: true,
+    });
+    var swiper3 = new Swiper('.slider__container-3', {
+      slidesPerView: "auto",
+      pagination: '.slider__pagination-3',
+      paginationClickable: true,
+      spaceBetween: 50,
+      observer: true,
+      observeParents: true,
+      init: true,
+    });
+    var swiper4 = new Swiper('.slider__container-4', {
+      slidesPerView: "auto",
+      pagination: '.slider__pagination-4',
+      paginationClickable: true,
+      spaceBetween: 50,
+      observer: true,
+      observeParents: true,
+      init: true,
     });
   </script>
 </body>
