@@ -5,6 +5,7 @@ body {
   font-weight: 300;
   color: @normal;
   background-color: @bg-white;
+  overflow-x: hidden;
 }
 
 img {
@@ -26,6 +27,10 @@ html {
 
 figure {
   .reset();
+  
+  img {
+    display: block;
+  }
 }
 
 ul {

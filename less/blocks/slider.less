@@ -50,7 +50,7 @@
 .slider__sort {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: stretch;
   margin-top: 17px;
   margin-bottom: 30px;
   padding-left: 77px;
@@ -58,11 +58,14 @@
 }
 
 .slider__search {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: 49px;
   padding: 10px 20px;
   font-weight: 400;
   color: @normal;
+  text-align: center;
   border: 1px solid rgba(255,255,255,0);
   
   &:hover,
