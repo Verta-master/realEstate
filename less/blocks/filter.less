@@ -1,6 +1,228 @@
 .filter {
   margin-bottom: 45px;
   padding-top: 50px;
-  padding-bottom: 55px;
+  padding-bottom: 20px;
   background-color: @bg-grey;
+}
+
+.filter__line {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+
+.filter__title {
+  width: 165px;
+  margin: 0;
+  margin-bottom: 35px;
+  margin-right: 7px;
+  font-size: 28px;
+  font-weight: 700;
+  
+  &--wide {
+    width: 210px;
+  }
+}
+
+.filter__text {
+  position: absolute;
+  top: -25px;
+  right: 215px;
+  font-size: 14px;
+  color: #57585b;
+}
+
+.filter__select,
+.filter__range,
+.filter__input {
+  height: 42px;
+  margin-bottom: 35px;
+  margin-right: 8px;
+  font-size: 20px;
+  color: #3d3d3d;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 14.16px 9.84px rgba(5, 5, 5, 0.05);
+}
+
+.filter__input {
+  width: 99px;
+  text-align: center;
+}
+
+.filter__select,
+.filter__range {
+  width: 256px;
+}
+
+.filter__select {
+  padding-left: 25px;
+  padding-right: 30px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+  background-image: url(../img/arrow-black.png);
+  background-repeat: no-repeat;
+  background-position: 95% 20px;
+  background-size: 12px 7px;
+  
+  &::-ms-expand {
+    color: transparent;
+    border: none;
+    background-color: transparent;
+  }
+  
+  &:last-of-type {
+    margin-right: 0;
+  }
+  
+  &--narrow {
+    width: 204px;
+  }
+}
+
+.filter__range {
+  padding: 0 15px;
+  padding-top: 18px;
+}
+
+.ui-slider {
+	position: relative;
+}
+/* Ползунок */
+.ui-slider .ui-slider-handle {
+	position: absolute;
+	z-index: 2;
+	width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background-color: rgb(247, 247, 247);
+  box-shadow: 0px 0px 3.88px 0.12px rgba(5, 5, 5, 0.41);
+	background-image: url(../img/handler.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 7px 9px;
+	cursor: pointer;
+  outline: none;
+}
+.ui-slider .ui-slider-range {
+	position: absolute;
+	z-index: 1;
+	font-size: .7em;
+	display: block;
+	border: 0;
+	overflow: hidden;
+}
+/* горизонтальный слайдер (сама полоса по которой бегает ползунок) */
+.ui-slider-horizontal {
+	height: 5px;
+}
+/* позиционируем ползунки */
+.ui-slider-horizontal .ui-slider-handle { 
+	top: -8px;
+	margin-left: -8px;
+}
+.ui-slider-horizontal .ui-slider-range {
+	top: 0;
+	height: 100%;
+}
+.ui-slider-horizontal .ui-slider-range-min { 
+	left: 0;
+}
+.ui-slider-horizontal .ui-slider-range-max {
+	right: 0;
+}
+/* оформление полосы по которой ходит ползунок */
+.ui-widget-content { 
+	border: 1px solid @bg-grey;
+	background-color: @bg-grey;
+}
+/* оформление активного участка (между двумя ползунками) */
+.ui-widget-header { 
+	border: 1px solid @red;
+	background-color: @red;
+}
+/* скругление для полосы слайдера */
+.ui-corner-all {
+	border-radius: 4px;
+}
+
+.filter__more {
+  display: none;
+}
+
+.filter__label {
+  display: block;
+  margin-left: auto;
+  margin-bottom: 25px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #3d3d3d;
+  cursor: pointer;
+  
+  span:first-of-type {
+    margin-right: 13px;
+  }
+  
+  &:hover,
+  &:active {
+    color: @red;
+  }
+}
+
+.filter__opened {
+  display: none;
+}
+
+.filter__closed {
+  display: inline-block;
+}
+
+.filter__more:checked ~ .filter__line .filter__label .filter__opened {
+  display: inline-block;
+}
+
+.filter__more:checked ~ .filter__line .filter__label .filter__closed {
+  display: none;
+}
+
+.filter__line--hidden {
+  display: none;
+}
+
+.filter__more:checked ~ .filter__line--hidden {
+  display: flex;
+}
+
+.filter__btn {
+  margin-left: auto;
+  margin-bottom: 35px;
+  width: 184px;
+  height: 57px;
+}
+
+.filter__show {
+  width: 48px;
+  height: 42px;
+  margin-bottom: 35px;
+  color: @red;
+  background-color: #fff;
+  box-shadow: 0px 0px 14.16px 9.84px rgba(5, 5, 5, 0.05);
+  
+  &:hover,
+  &:active,
+  &--active {
+    background-color: @red;
+    color: #fff;
+  }
+  
+  &--active {
+    cursor: default;
+  }
+}
+
+.filter__plate {
+  margin-left: 35px;
 }
