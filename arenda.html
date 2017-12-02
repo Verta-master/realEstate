@@ -57,31 +57,25 @@
         <h1 class="search__title">Аренда и продажа квартир в Дмитрове!</h1>
         <form action="#" method="get" class="search__form">
           <div class="search__field">
-            <input type="checkbox" name="check-1" id="check-1" class="search__checkbox">
-            <label for="check-1" class="search__label">Снять</label>
-            <ul class="search__list">
-              <li class="search__item"><a href="#" class="search__link">Снять</a></li>
-              <li class="search__item"><a href="#" class="search__link">Продать</a></li>
-              <li class="search__item"><a href="#" class="search__link">Сдать</a></li>
-            </ul>
+            <select name="rent" id="rent" class="search__select">
+              <option value="Снять" selected>Снять</option>
+              <option value="Продать">Продать</option>
+              <option value="Сдать">Сдать</option>
+            </select>
           </div>
           <div class="search__field">
-            <input type="checkbox" name="check-2" id="check-2" class="search__checkbox">
-            <label for="check-2" class="search__label">Любую недвижимость</label>
-            <ul class="search__list">
-              <li class="search__item"><a href="#" class="search__link">Любую недвижимость</a></li>
-              <li class="search__item"><a href="#" class="search__link">Пункт 2</a></li>
-              <li class="search__item"><a href="#" class="search__link">Пункт 3</a></li>
-            </ul>
+            <select name="type" id="type" class="search__select">
+              <option value="any" selected>Любую недвижимость</option>
+              <option value="value2">Пункт 2</option>
+              <option value="value3">Пункт 3</option>
+            </select>
           </div>
           <div class="search__field">
-            <input type="checkbox" name="check-3" id="check-3" class="search__checkbox">
-            <label for="check-3" class="search__label">Все районы</label>
-            <ul class="search__list">
-              <li class="search__item"><a href="#" class="search__link">Все районы</a></li>
-              <li class="search__item"><a href="#" class="search__link">Пункт 2</a></li>
-              <li class="search__item"><a href="#" class="search__link">Пункт 3</a></li>
-            </ul>
+            <select name="place" id="place" class="search__select">
+              <option value="all" selected>Все районы</option>
+              <option value="value2">Пункт 2</option>
+              <option value="value3">Пункт 3</option>
+            </select>
           </div>
           <button type="submit" class="btn search__btn">ПОИСК</button>
         </form>
@@ -132,30 +126,89 @@
   </nav>
   
   <section class="filter">
-    <div class="filter__line">
-      <p class="filter__title">Цена:</p>
-      <p><input type="text" id="amount"></p>
-      <div id="slider-range"></div>
-      <select name="city" id="city">
-        <option value="Город"></option>
-        <option value="1"></option>
-        <option value="2"></option>
-      </select>
-      <select name="district" id="district">
-        <option value="Район "></option>
-        <option value="1"></option>
-        <option value="2"></option>
-      </select>
-      <label for="city" class="filter__text">выберите город</label>
-    </div>
-    <div class="filter__line">
-      
-    </div>
-    <input type="checkbox" name="more" id="more" class="filter__more">
-    <label for="more" class="filter__label"><span class="fa fa-list"></span>Развернуть расширенный поиск</label>
-    <div class="filter__line">
-      
-    </div>
+   <form action="#" method="get" class="filter__form wrapper">
+      <div class="filter__line">
+        <p class="filter__title">Цена:</p>
+        <input type="text" id="amount-min" class="filter__input">
+        <div class="filter__range">
+          <div id="slider-range"></div>
+        </div>
+        <input type="text" id="amount-max" class="filter__input">
+        <select name="city" id="city" class="filter__select">
+          <option value="Город" selected>Город</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+        </select>
+        <select name="district" id="district" class="filter__select">
+          <option value="Район" selected>Район</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+        </select>
+        <label for="city" class="filter__text">выберите город</label>
+      </div>
+      <div class="filter__line">
+        <p class="filter__title">Площадь:</p>
+        <input type="text" id="amount-min2" class="filter__input">
+        <div class="filter__range">
+          <div id="slider-range2"></div>
+        </div>
+        <input type="text" id="amount-max2" class="filter__input">
+        <select name="room" id="room" class="filter__select">
+          <option value="Кол-во комнат" selected>Кол-во комнат</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+        </select>
+        <select name="floor" id="floor" class="filter__select">
+          <option value="Этаж" selected>Этаж</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+        </select>
+      </div>
+      <input type="checkbox" name="more" id="more" class="filter__more">
+      <div class="filter__line filter__line--hidden">
+        <p class="filter__title filter__title--wide">Параметры:</p>
+        <select name="select1" id="select1" class="filter__select">
+          <option value="0" selected>Доп. параметры</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+        </select>
+        <select name="select2" id="select2" class="filter__select">
+          <option value="0" selected>Доп. параметры</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+        </select>
+        <select name="select3" id="select3" class="filter__select">
+          <option value="0" selected>Доп. параметры</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+        </select>
+      </div>
+      <div class="filter__line">
+        <label for="more" class="filter__label"><span class="fa fa-list"></span><span class="filter__closed">Развернуть</span><span class="filter__opened">Свернуть</span> расширенный поиск</label>
+      </div>
+      <div class="filter__line">
+        <p class="filter__title filter__title--wide">Сортировать:</p>
+        <select name="select1" id="select1" class="filter__select filter__select--narrow">
+          <option value="0" selected>По дате</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+        </select>
+        <select name="select2" id="select2" class="filter__select filter__select--narrow">
+          <option value="0" selected>По цене</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+        </select>
+        <button type="button" class="filter__show filter__show--active filter__plate">
+          <span class="fa fa-th"></span>
+          <span class="visually-hidden">Плитка</span>
+        </button>
+        <button type="button" class="filter__show filter__list">
+          <span class="fa fa-list"></span>
+          <span class="visually-hidden">Список</span>
+        </button>
+        <button type="submit" class="btn filter__btn">ПОИСК</button>
+      </div>
+    </form>
   </section>
   
   <section class="slider-list">
@@ -165,9 +218,9 @@
           <img src="img/house-1.jpg" alt="" width="272" height="171">
         </figure>
         <div class="slider__top">
-          <h3 class="slider__h3">Квартира</h3>
+          <h3 class="slider__h3">Квартира<span> с названием ЖК “Агентство №1”</span></h3>
           <p class="slider__text">3 комнаты</p>
-          <p class="slider__address"><span class="fa fa-map-marker"></span> г.&nbsp;Дмитров, ул.&nbsp;Мира,<br>д.2, кв.33</p>
+          <p class="slider__address"><span class="fa fa-map-marker"></span> г.&nbsp;Дмитров, ул.&nbsp;Мира, д.2,&nbsp;кв.33</p>
           <div class="slider__details">
             <p class="slider__area">40 м2</p>
             <p class="slider__floor">3/13 этаж</p>
@@ -183,9 +236,9 @@
           <img src="img/house-2.jpg" alt="" width="272" height="171">
         </figure>
         <div class="slider__top">
-          <h3 class="slider__h3">Квартира</h3>
+          <h3 class="slider__h3">Квартира<span> с названием ЖК “Агентство №1”</span></h3>
           <p class="slider__text">3 комнаты</p>
-          <p class="slider__address"><span class="fa fa-map-marker"></span> г.&nbsp;Дмитров, ул.&nbsp;Мира,<br>д.2, кв.33</p>
+          <p class="slider__address"><span class="fa fa-map-marker"></span> г.&nbsp;Дмитров, ул.&nbsp;Мира, д.2,&nbsp;кв.33</p>
           <div class="slider__details">
             <p class="slider__area">40 м2</p>
             <p class="slider__floor">3/13 этаж</p>
@@ -201,9 +254,9 @@
           <img src="img/house-3.jpg" alt="" width="272" height="171">
         </figure>
         <div class="slider__top">
-          <h3 class="slider__h3">Квартира</h3>
+          <h3 class="slider__h3">Квартира<span> с названием ЖК “Агентство №1”</span></h3>
           <p class="slider__text">3 комнаты</p>
-          <p class="slider__address"><span class="fa fa-map-marker"></span> г.&nbsp;Дмитров, ул.&nbsp;Мира,<br>д.2, кв.33</p>
+          <p class="slider__address"><span class="fa fa-map-marker"></span> г.&nbsp;Дмитров, ул.&nbsp;Мира, д.2,&nbsp;кв.33</p>
           <div class="slider__details">
             <p class="slider__area">40 м2</p>
             <p class="slider__floor">3/13 этаж</p>
@@ -219,9 +272,9 @@
           <img src="img/house-1.jpg" alt="" width="272" height="171">
         </figure>
         <div class="slider__top">
-          <h3 class="slider__h3">Квартира</h3>
+          <h3 class="slider__h3">Квартира<span> с названием ЖК “Агентство №1”</span></h3>
           <p class="slider__text">3 комнаты</p>
-          <p class="slider__address"><span class="fa fa-map-marker"></span> г.&nbsp;Дмитров, ул.&nbsp;Мира,<br>д.2, кв.33</p>
+          <p class="slider__address"><span class="fa fa-map-marker"></span> г.&nbsp;Дмитров, ул.&nbsp;Мира, д.2,&nbsp;кв.33</p>
           <div class="slider__details">
             <p class="slider__area">40 м2</p>
             <p class="slider__floor">3/13 этаж</p>
@@ -237,9 +290,9 @@
           <img src="img/house-1.jpg" alt="" width="272" height="171">
         </figure>
         <div class="slider__top">
-          <h3 class="slider__h3">Квартира</h3>
+          <h3 class="slider__h3">Квартира<span> с названием ЖК “Агентство №1”</span></h3>
           <p class="slider__text">3 комнаты</p>
-          <p class="slider__address"><span class="fa fa-map-marker"></span> г.&nbsp;Дмитров, ул.&nbsp;Мира,<br>д.2, кв.33</p>
+          <p class="slider__address"><span class="fa fa-map-marker"></span> г.&nbsp;Дмитров, ул.&nbsp;Мира, д.2,&nbsp;кв.33</p>
           <div class="slider__details">
             <p class="slider__area">40 м2</p>
             <p class="slider__floor">3/13 этаж</p>
@@ -255,9 +308,9 @@
           <img src="img/house-2.jpg" alt="" width="272" height="171">
         </figure>
         <div class="slider__top">
-          <h3 class="slider__h3">Квартира</h3>
+          <h3 class="slider__h3">Квартира<span> с названием ЖК “Агентство №1”</span></h3>
           <p class="slider__text">3 комнаты</p>
-          <p class="slider__address"><span class="fa fa-map-marker"></span> г.&nbsp;Дмитров, ул.&nbsp;Мира,<br>д.2, кв.33</p>
+          <p class="slider__address"><span class="fa fa-map-marker"></span> г.&nbsp;Дмитров, ул.&nbsp;Мира, д.2,&nbsp;кв.33</p>
           <div class="slider__details">
             <p class="slider__area">40 м2</p>
             <p class="slider__floor">3/13 этаж</p>
@@ -273,9 +326,9 @@
           <img src="img/house-3.jpg" alt="" width="272" height="171">
         </figure>
         <div class="slider__top">
-          <h3 class="slider__h3">Квартира</h3>
+          <h3 class="slider__h3">Квартира<span> с названием ЖК “Агентство №1”</span></h3>
           <p class="slider__text">3 комнаты</p>
-          <p class="slider__address"><span class="fa fa-map-marker"></span> г.&nbsp;Дмитров, ул.&nbsp;Мира,<br>д.2, кв.33</p>
+          <p class="slider__address"><span class="fa fa-map-marker"></span> г.&nbsp;Дмитров, ул.&nbsp;Мира, д.2,&nbsp;кв.33</p>
           <div class="slider__details">
             <p class="slider__area">40 м2</p>
             <p class="slider__floor">3/13 этаж</p>
@@ -291,9 +344,9 @@
           <img src="img/house-1.jpg" alt="" width="272" height="171">
         </figure>
         <div class="slider__top">
-          <h3 class="slider__h3">Квартира</h3>
+          <h3 class="slider__h3">Квартира<span> с названием ЖК “Агентство №1”</span></h3>
           <p class="slider__text">3 комнаты</p>
-          <p class="slider__address"><span class="fa fa-map-marker"></span> г.&nbsp;Дмитров, ул.&nbsp;Мира,<br>д.2, кв.33</p>
+          <p class="slider__address"><span class="fa fa-map-marker"></span> г.&nbsp;Дмитров, ул.&nbsp;Мира, д.2,&nbsp;кв.33</p>
           <div class="slider__details">
             <p class="slider__area">40 м2</p>
             <p class="slider__floor">3/13 этаж</p>
@@ -309,9 +362,9 @@
           <img src="img/house-1.jpg" alt="" width="272" height="171">
         </figure>
         <div class="slider__top">
-          <h3 class="slider__h3">Квартира</h3>
+          <h3 class="slider__h3">Квартира<span> с названием ЖК “Агентство №1”</span></h3>
           <p class="slider__text">3 комнаты</p>
-          <p class="slider__address"><span class="fa fa-map-marker"></span> г.&nbsp;Дмитров, ул.&nbsp;Мира,<br>д.2, кв.33</p>
+          <p class="slider__address"><span class="fa fa-map-marker"></span> г.&nbsp;Дмитров, ул.&nbsp;Мира, д.2,&nbsp;кв.33</p>
           <div class="slider__details">
             <p class="slider__area">40 м2</p>
             <p class="slider__floor">3/13 этаж</p>
@@ -327,9 +380,9 @@
           <img src="img/house-2.jpg" alt="" width="272" height="171">
         </figure>
         <div class="slider__top">
-          <h3 class="slider__h3">Квартира</h3>
+          <h3 class="slider__h3">Квартира<span> с названием ЖК “Агентство №1”</span></h3>
           <p class="slider__text">3 комнаты</p>
-          <p class="slider__address"><span class="fa fa-map-marker"></span> г.&nbsp;Дмитров, ул.&nbsp;Мира,<br>д.2, кв.33</p>
+          <p class="slider__address"><span class="fa fa-map-marker"></span> г.&nbsp;Дмитров, ул.&nbsp;Мира, д.2,&nbsp;кв.33</p>
           <div class="slider__details">
             <p class="slider__area">40 м2</p>
             <p class="slider__floor">3/13 этаж</p>
@@ -345,9 +398,9 @@
           <img src="img/house-3.jpg" alt="" width="272" height="171">
         </figure>
         <div class="slider__top">
-          <h3 class="slider__h3">Квартира</h3>
+          <h3 class="slider__h3">Квартира<span> с названием ЖК “Агентство №1”</span></h3>
           <p class="slider__text">3 комнаты</p>
-          <p class="slider__address"><span class="fa fa-map-marker"></span> г.&nbsp;Дмитров, ул.&nbsp;Мира,<br>д.2, кв.33</p>
+          <p class="slider__address"><span class="fa fa-map-marker"></span> г.&nbsp;Дмитров, ул.&nbsp;Мира, д.2,&nbsp;кв.33</p>
           <div class="slider__details">
             <p class="slider__area">40 м2</p>
             <p class="slider__floor">3/13 этаж</p>
@@ -363,9 +416,9 @@
           <img src="img/house-1.jpg" alt="" width="272" height="171">
         </figure>
         <div class="slider__top">
-          <h3 class="slider__h3">Квартира</h3>
+          <h3 class="slider__h3">Квартира<span> с названием ЖК “Агентство №1”</span></h3>
           <p class="slider__text">3 комнаты</p>
-          <p class="slider__address"><span class="fa fa-map-marker"></span> г.&nbsp;Дмитров, ул.&nbsp;Мира,<br>д.2, кв.33</p>
+          <p class="slider__address"><span class="fa fa-map-marker"></span> г.&nbsp;Дмитров, ул.&nbsp;Мира, д.2,&nbsp;кв.33</p>
           <div class="slider__details">
             <p class="slider__area">40 м2</p>
             <p class="slider__floor">3/13 этаж</p>
@@ -441,6 +494,27 @@
   
   <script src="js/jquery-3.2.1.min.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="js/uisliders.js"></script>
+  <script src="js/jquery.ui.touch-punch.min.js"></script>
   <script src="js/script.js"></script>
+  <script>
+    var btnList = document.querySelector(".filter__list");
+    var btnPlate = document.querySelector(".filter__plate");
+    var slideShow = document.querySelector(".slider-list__wrap");
+    btnList.addEventListener("click", function() {
+      if (btnPlate.classList.contains("filter__show--active")) {
+        btnPlate.classList.remove("filter__show--active");
+        btnList.classList.add("filter__show--active");
+        slideShow.classList.add("slider-list__active");
+      };
+    });
+    btnPlate.addEventListener("click", function() {
+      if (btnList.classList.contains("filter__show--active")) {
+        btnList.classList.remove("filter__show--active");
+        btnPlate.classList.add("filter__show--active");
+        slideShow.classList.remove("slider-list__active");
+      };
+    });
+  </script>
 </body>
 </html>
