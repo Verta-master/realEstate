@@ -179,6 +179,21 @@
       width: 100%;
     }
   }
+  
+  .vacancy__item {
+    display: block;
+  }
+  
+  .vacancy__img {
+    float: left;
+    width: 45%;
+    margin-right: 40px;
+    margin-bottom: 20px;
+  }
+  
+  .vacancy__block {
+    width: 100%;
+  }
 }
 
 //--------------------------
@@ -215,6 +230,15 @@
     text-align: center;
     max-width: none;
     margin-top: 40px;
+  }
+  
+  .header--internal .header__wrap {
+    flex-wrap: wrap;
+    padding-top: 15px;
+  }
+  
+  .user--internal {
+    justify-content: space-between;
   }
   
   .main-nav__list {
@@ -499,6 +523,15 @@
     margin-right: auto;
     margin-bottom: 20px;
   }
+  
+  .vacancy__subtitle,
+  .vacancy__title {
+    font-size: 24px;
+  }
+  
+  .vacancy__point {
+    font-size: 18px;
+  }
 }
 
 //-----------------------
@@ -509,6 +542,22 @@
   
   .header__text {
     font-size: 30px;
+  }
+  
+  .header--internal::before {
+    display: none;
+  }
+  
+  .user--internal {
+    flex-direction: column;
+    margin-top: 20px;
+    align-items: center;
+    
+    .user__wrap {
+      max-width: 230px;
+      align-items: flex-start;
+      justify-content: center;
+    }
   }
   
   .about__img,
@@ -631,5 +680,22 @@
     margin-left: 0;
     padding-left: 20px;
     padding-right: 20px;
+  }
+  
+  .title-h1 {
+    font-size: 36px;
+  }
+  
+  .title::after {
+    display: none;
+  }
+  
+  .vacancy {
+    padding-top: 40px;
+  }
+  
+  .vacancy__img {
+    float: none;
+    width: 100%;
   }
 }

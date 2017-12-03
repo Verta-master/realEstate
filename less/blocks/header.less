@@ -2,6 +2,25 @@
   position: relative;
   z-index: 10;
   padding-top: 17px;
+  
+  &--internal {
+    padding-top: 0;
+    
+    &::before {
+      content: "";
+      position: absolute;
+      top: -95px;
+      right: -45px;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background-color: rgba(231, 51, 62, 0.2);
+      background-image: url(../img/shape-3.svg);
+      background-size: 40px 15px;
+      background-repeat: no-repeat;
+      background-position: left 40px bottom 30px;
+    }
+  }
 }
 
 .header__wrap {

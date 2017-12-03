@@ -9,3 +9,34 @@
     font-weight: 300;
   }
 }
+
+.title {
+  width: 100%;
+  min-height: 170px;
+  background-image: url(../img/header.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -18px;
+    left: 0;
+    width: 475px;
+    height: 36px;
+    background-image: url(../img/line.png);
+    background-repeat: repeat-x;
+    background-size: contain;
+  }
+}
+
+.title-h1 {
+  font-size: 72px;
+  text-align: center;
+  margin: 0;
+}
