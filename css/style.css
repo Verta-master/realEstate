@@ -628,6 +628,7 @@ button {
 }
 .header--internal {
   padding-top: 0;
+  background-color: #fafeff;
 }
 .header--internal::before {
   content: "";
@@ -3281,6 +3282,7 @@ a.sp-video:after {
 .contacts {
   padding-top: 110px;
   padding-bottom: 65px;
+  background-color: #fafeff;
 }
 .contacts__wrap {
   display: -ms-flexbox;
@@ -3756,7 +3758,7 @@ a.sp-video:after {
     margin-right: auto;
   }
   .card__left--slider {
-    width: 100%;
+    width: 300px;
   }
   .card__area,
   .card__floor,
