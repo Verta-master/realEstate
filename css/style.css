@@ -472,6 +472,8 @@ button {
 .title {
   width: 100%;
   min-height: 170px;
+  padding-top: 40px;
+  padding-bottom: 40px;
   background-image: url(../img/header.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -1086,6 +1088,23 @@ button {
   background-image: url(../img/icon-big.png);
   background-repeat: no-repeat;
 }
+.service--internal {
+  padding-top: 90px;
+  padding-bottom: 95px;
+  background-image: linear-gradient(79deg, rgba(255, 0, 0, 0.02), rgba(255, 0, 255, 0.02), rgba(0, 0, 255, 0.02), rgba(0, 255, 255, 0.02), rgba(0, 255, 0, 0.02), rgba(255, 255, 0, 0.02), rgba(255, 0, 0, 0.02));
+}
+.service--internal::before {
+  display: none;
+}
+.service--internal::after {
+  bottom: -140px;
+  right: 0;
+  left: auto;
+  width: 342px;
+  height: 456px;
+  background-image: url(../img/icon-big-4.png);
+  z-index: -1;
+}
 .service__title {
   text-align: right;
   margin-bottom: 105px;
@@ -1119,9 +1138,9 @@ button {
   width: 100%;
   min-height: 78px;
   padding-left: 28px;
+  padding-top: 20px;
   color: #e7333e;
   font-size: 30px;
-  line-height: 78px;
   background-color: #f7f7f7;
   position: relative;
 }
@@ -1144,6 +1163,22 @@ button {
 .service__link:hover span,
 .service__link:active span {
   background-color: #db303b;
+}
+.service__list--internal {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: start;
+      align-items: flex-start;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+}
+.service__list--internal .service__item {
+  width: 470px;
+  margin-bottom: 60px;
 }
 .benefits {
   padding-top: 55px;
@@ -1287,6 +1322,9 @@ button {
 }
 .footer--vacancy {
   background-color: #fcfcfc;
+}
+.footer--service {
+  background-color: #fafeff;
 }
 .footer__wrap {
   display: -ms-flexbox;
@@ -3569,6 +3607,11 @@ a.sp-video:after {
   .slider-list__wrap {
     width: 580px;
   }
+  .service__list--internal {
+    -ms-flex-pack: center;
+        justify-content: center;
+    padding-top: 30px;
+  }
 }
 @media (max-width: 766px) {
   .header__wrap {
@@ -3768,6 +3811,8 @@ a.sp-video:after {
     line-height: 1.2;
     padding-left: 10px;
     padding-right: 70px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: start;
