@@ -76,6 +76,14 @@
     margin: 0 auto;
     padding-left: 0;
     padding-right: 0;
+    
+    &--card {
+      justify-content: center;
+    }
+  }
+  
+  .slider-list__title {
+    text-align: center;
   }
   
   .slider__slide--list:nth-child(4n) {
@@ -134,6 +142,42 @@
   
   .filter__wrap {
     margin-left: 0;
+  }
+  
+  .card__left {
+    width: 100%;
+    
+    &--slider {
+      width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  
+  .card__wrap {
+    flex-wrap: wrap;
+    
+    &--about {
+      padding-bottom: 0;
+    }
+  }
+  
+  .card__left {
+    margin-bottom: 20px;
+    
+    &--text {
+      padding-bottom: 0;
+    }
+  }
+  
+  .card__right {
+    margin-left: auto;
+    margin-right: auto;
+    
+    &--text {
+      margin-left: 35px;
+      width: 100%;
+    }
   }
 }
 
@@ -431,6 +475,30 @@
   .filter__btn {
     margin-right: auto;
   }
+  
+  .card__left--slider {
+    width: 100%;
+  }
+  
+  .card__area,
+  .card__floor,
+  .card__text,
+  .card__left--text p,
+  .card__right--text p {
+    font-size: 18px;
+  }
+  
+  .card__h3,
+  .card__title,
+  .slider-list__title {
+    font-size: 24px;
+  }
+  
+  .card__block {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+  }
 }
 
 //-----------------------
@@ -556,5 +624,12 @@
   .slider-list__active .slider__slide--list .slider__link {
     margin: 0;
     width: 130px;
+  }
+  
+  .card__left--text,
+  .card__right--text {
+    margin-left: 0;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
