@@ -28,6 +28,12 @@
   font-style: normal;
   src: url("../fonts/fontawesome-webfont.woff2") format("woff2"), url("../fonts/fontawesome-webfont.woff") format("woff");
 }
+@font-face {
+  font-weight: 400;
+  font-family: "ft40 Roman";
+  font-style: normal;
+  src: url("../fonts/ft40-Roman.woff2") format("woff2"), url("../fonts/ft40-Roman.woff") format("woff");
+}
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
@@ -498,7 +504,9 @@ button {
   background-size: contain;
 }
 .title-h1 {
+  font-family: "ft40 Roman", "Arial", sans-serif;
   font-size: 72px;
+  font-weight: 400;
   text-align: center;
   margin: 0;
 }
@@ -3270,6 +3278,43 @@ a.sp-video:after {
 .vacancy__list {
   margin-bottom: 15px;
 }
+.contacts {
+  padding-top: 110px;
+  padding-bottom: 65px;
+}
+.contacts__wrap {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: start;
+      align-items: flex-start;
+}
+.contacts__map {
+  width: 766px;
+  height: 523px;
+  margin-left: 20px;
+  background-image: url(../img/map-big.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.contacts__title {
+  font-size: 24px;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+.contacts__text {
+  margin: 0;
+  color: #4c4c4c;
+}
+.contacts__data {
+  margin-bottom: 30px;
+}
+.contacts__data a:hover,
+.contacts__data a:active {
+  text-decoration: underline;
+}
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .sp-button {
     width: 14px;
@@ -3446,6 +3491,9 @@ a.sp-video:after {
   }
   .vacancy__block {
     width: 100%;
+  }
+  .contacts__map {
+    width: 60%;
   }
 }
 @media (max-width: 1022px) {
@@ -3755,6 +3803,16 @@ a.sp-video:after {
         align-items: flex-start;
     -ms-flex-pack: center;
         justify-content: center;
+  }
+  .contacts__map {
+    width: 100%;
+    margin-left: 0;
+  }
+  .contacts__wrap {
+    display: block;
+  }
+  .contacts {
+    padding-top: 60px;
   }
 }
 @media (max-width: 481px) {
