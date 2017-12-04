@@ -1264,6 +1264,7 @@ button {
   line-height: 55px;
 }
 .about {
+  min-height: 690px;
   position: relative;
   padding-bottom: 95px;
 }
@@ -1348,18 +1349,16 @@ button {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 450px;
+  width: 470px;
   margin-left: 65px;
   -ms-flex-pack: justify;
       justify-content: space-between;
   -ms-flex-align: start;
       align-items: flex-start;
 }
-.footer__item:nth-child(2n+1) {
-  width: 55%;
-}
-.footer__item:nth-child(2n) {
-  width: 45%;
+.footer__item {
+  width: 50%;
+  padding-right: 10px;
 }
 .footer__link {
   color: #4c4c4c;
@@ -2145,7 +2144,7 @@ button.swiper-pagination-bullet {
   position: absolute;
   left: 30px;
   top: 185px;
-  opacity: 0;
+  visibility: hidden;
   max-width: 1170px;
   z-index: 5;
 }
@@ -2153,7 +2152,7 @@ button.swiper-pagination-bullet {
 #tab-03:checked ~ .slider__tab--03,
 #tab-02:checked ~ .slider__tab--02,
 #tab-01:checked ~ .slider__tab--01 {
-  opacity: 1;
+  visibility: visible;
 }
 #tab-04:checked ~ .slider__sort .slider__search--04,
 #tab-03:checked ~ .slider__sort .slider__search--03,
@@ -3072,6 +3071,9 @@ a.sp-video:after {
 }
 .card__left--text {
   padding: 30px 35px;
+}
+.card__left--slider {
+  overflow: hidden;
 }
 .card__right {
   width: 555px;
