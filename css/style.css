@@ -3759,9 +3759,6 @@ a.sp-video:after {
   .filter__btn {
     margin-right: auto;
   }
-  .card__left--slider {
-    width: 300px;
-  }
   .card__area,
   .card__floor,
   .card__text,
